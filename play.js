@@ -11,12 +11,14 @@ const connect = function () {
   conn.setEncoding("utf8");
 
   conn.on("connect", (data) => {
-    console.log("recived data connection is establisted")
+    console.log("Recived data connection is establisted")
   });
   console.log("Connecting ...");
   conn.on("data", (data) => {
     console.log(data)
   });
+
+  // event handler to let the client know that they have connected to game server
 
   conn.on("connect", (connect) => {
     console.log("Successfully connected to game server")
@@ -25,6 +27,10 @@ const connect = function () {
   conn.on('connect', () => {
     conn.write("Name: NAA");
   });
+
+  // conn.on('connect', () => {
+  //   conn.write("Move: up");
+  // });
 
   return conn;
 };
