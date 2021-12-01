@@ -26,18 +26,32 @@ const connect = function () {
 
   conn.on('connect', () => {
     conn.write("Name: NAA");
+
+setTimeout (() => {
+  conn.write("Move: up");
+}, 1000)
+    
   });
-
-  // conn.on('connect', () => {
-  //   conn.write("Move: up");
-  // });
-
   return conn;
 };
 
+const setupInput = function () {
+  const stdin = process.stdin;
+  stdin.setRawMode(true);
+  stdin.setEncoding("utf8");
+  stdin.resume();
+  stdin.on("data", handleUserInput);
+  return stdin;
+};
 
+
+const handleUserInput = function(key) {
+  if (key === 'w') {
+    process.exit();
+  }
+};
 
 module.exports = {
-  connect
+  connect, setupInput
 };
 
