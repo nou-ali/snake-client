@@ -8,7 +8,8 @@ const MOVE_RIGHT_KEY = "d";
 const MESSAGES = {
   x: "Say: Hii",
   y:"Say: it's been a long day",
-  y: "Say: hope you'll get some rest",
+  y: "Say: hope you'll get rest",
+  v: "Say: peace out",
 };
 
 
