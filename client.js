@@ -1,6 +1,10 @@
 const net = require("net");
-const {connect,setupInput} = require('./play')
+const {connect} = require('./play')
+const {setupInput} = require("./input")
 
-
+console.log("Connecting ...");
+//connect();
 setupInput(connect());
+
+
 
