@@ -20,20 +20,20 @@ const handleUserInput = function (key) {
   }
   if (key === MOVE_UP_KEY) {
     connection.write("Move: up")
-    //connection.write("Say: Hii")
+    connection.write("Say: Hii")
   }
   if (key === MOVE_LEFT_KEY) {
     connection.write("Move: left")
-    //connection.write("Say: it's been a long day")
+    connection.write("Say: it's been a long day")
   }
   if (key === MOVE_DOWN_KEY) {
     connection.write("Move: down")
-    //connection.write("Say: hope you'll get some rest")
+    connection.write("Say: hope you'll get rest")
   }
 
   if (key === MOVE_RIGHT_KEY) {
     connection.write("Move: right")
-    //connection.write("Peace out")
+    connection.write("Say: peace out")
   } if (MESSAGES[key]) {
     connection.write(MESSAGES[key])
   }
